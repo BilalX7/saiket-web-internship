@@ -8,5 +8,7 @@ own sibling directory so its source, assets, and review history remain easy to i
 - [`task-1-portfolio/`](./task-1-portfolio/) — Bilal Koubar's single-page professional portfolio,
   built with semantic HTML, modern CSS, and dependency-free vanilla JavaScript.
 
-The Task 1 website is prepared for GitHub Pages, but it has not been published from this workspace.
-See the task-specific README and validation report before enabling the deployment workflow.
+Task 1 is published through GitHub Pages at
+[https://bilalx7.github.io/saiket-web-internship/](https://bilalx7.github.io/saiket-web-internship/).
+Deployment is automated by the repository's GitHub Actions workflow whenever an eligible change is
+pushed to `main`.

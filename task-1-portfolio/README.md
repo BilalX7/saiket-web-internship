@@ -7,6 +7,9 @@ original editorial engineering design.
 The project uses only semantic HTML, modern CSS, and vanilla JavaScript. It has no package manager,
 framework, runtime dependency, analytics, backend, or build step.
 
+**Live site:**
+[https://bilalx7.github.io/saiket-web-internship/](https://bilalx7.github.io/saiket-web-internship/)
+
 ## Preview locally
 
 Serving the folder over HTTP is more reliable than opening `index.html` directly because browsers
@@ -76,33 +79,34 @@ publishing the Raki source repository or other client files.
 ## Verification status
 
 Static source, asset, HTTP, syntax, structure, metadata, and deployment-artifact checks are recorded
-in [`docs/chunk-4-validation.md`](./docs/chunk-4-validation.md). Browser screenshots, Lighthouse,
-200% zoom, and a full native keyboard/screen-reader pass remain release checks when a supported
-browser test environment is available.
+in [`docs/chunk-4-validation.md`](./docs/chunk-4-validation.md). The GitHub Pages deployment
+completed successfully on November 24, 2026, and the live page and its key assets returned HTTP
+200 during post-deployment verification. Browser screenshots, Lighthouse, 200% zoom, and a full
+native keyboard/screen-reader pass remain documented follow-up checks when a supported browser test
+environment is available.
 
-## Prepare GitHub Pages publication
+## GitHub Pages deployment
 
 The repository workflow stages only `index.html`, `css/`, `js/`, and `assets/` from this directory.
 It deliberately excludes `docs/`, this README, and future sibling internship tasks from the Pages
 artifact.
 
-Before publication:
+The portfolio is deployed at
+[https://bilalx7.github.io/saiket-web-internship/](https://bilalx7.github.io/saiket-web-internship/)
+by [`.github/workflows/deploy-portfolio.yml`](../.github/workflows/deploy-portfolio.yml). The
+workflow targets `main`, prepares a temporary `_site` artifact, and publishes that artifact through
+GitHub Pages.
 
-1. Confirm that the repository will be named `saiket-web-internship` under `BilalX7`, or update the
-   preconfigured social-image URL in `index.html`.
-2. Confirm the default branch. The prepared workflow currently targets `main`.
-3. Review `.gitignore` and `git status`; do not commit credentials, source ZIPs, or private client
+For future updates:
+
+1. Review `.gitignore` and `git status`; do not commit credentials, source ZIPs, or private client
    material.
-4. Initialize Git and connect the approved remote if the repository is not already initialized.
-5. Commit locally, then push only after owner/reviewer approval.
-6. In GitHub, open **Settings → Pages → Build and deployment** and choose **GitHub Actions**.
-7. Confirm Actions workflow permissions, inspect the workflow run, and verify the reported Pages URL.
-8. After deployment, verify HTTPS, the favicon, the absolute social-preview URL, all anchors and
-   contact links, mobile layouts, and the downloaded CV.
+2. Commit the approved changes and push `main` to `origin`.
+3. Inspect the **Deploy Task 1 portfolio to GitHub Pages** run in GitHub Actions.
+4. Verify HTTPS, the favicon, social preview, internal anchors, contact links, responsive layouts,
+   and CV download on the live site.
 
-If the site URL differs from `https://bilalx7.github.io/saiket-web-internship/`, update the Open
-Graph and Twitter image URL before sharing the site. No canonical URL is included until the actual
-deployment URL is confirmed.
+If the site URL changes, update the Open Graph and Twitter image URL before sharing the new address.
 
 ## Troubleshooting
 
@@ -139,8 +143,8 @@ the form prepares an email draft rather than claiming to send data from the webs
 “This project helped me practice responsive design, progressive enhancement, accessibility, and
 deployment preparation. Thank you to SaiKet Systems for the opportunity to build and document it.”
 
-When the project is approved and published, tag SaiKet Systems and use:
+When sharing the published project, tag SaiKet Systems and use:
 `#saiketsystems #saiket #saiketsys #WebDevelopment #HTML #CSS #JavaScript`
 
-Do not describe the internship as completed, claim a live deployment, or quote performance scores
-until those statements have been independently verified.
+The Task 1 portfolio may be described as live. Do not describe the internship as completed or quote
+performance scores until those statements have been independently verified.
