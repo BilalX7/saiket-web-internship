@@ -1,4 +1,4 @@
-name: Deploy Task 1 portfolio to GitHub Pages
+name: Deploy internship tasks to GitHub Pages
 
 on:
   push:
@@ -9,6 +9,10 @@ on:
       - "task-1-portfolio/css/**"
       - "task-1-portfolio/js/**"
       - "task-1-portfolio/assets/**"
+      - "task-2-ecommerce-product-page/index.html"
+      - "task-2-ecommerce-product-page/css/**"
+      - "task-2-ecommerce-product-page/js/**"
+      - "task-2-ecommerce-product-page/assets/**"
       - ".github/workflows/deploy-portfolio.yml"
   workflow_dispatch:
 
@@ -38,11 +42,19 @@ jobs:
       - name: Prepare portfolio artifact
         shell: bash
         run: |
-          mkdir -p _site
+          mkdir -p _site/task-2-ecommerce-product-page/css
+          mkdir -p _site/task-2-ecommerce-product-page/js
+          mkdir -p _site/task-2-ecommerce-product-page/assets/images
           cp task-1-portfolio/index.html _site/index.html
           cp -R task-1-portfolio/css _site/css
           cp -R task-1-portfolio/js _site/js
           cp -R task-1-portfolio/assets _site/assets
+          cp task-2-ecommerce-product-page/index.html _site/task-2-ecommerce-product-page/index.html
+          cp task-2-ecommerce-product-page/css/style.css _site/task-2-ecommerce-product-page/css/style.css
+          cp task-2-ecommerce-product-page/js/main.js _site/task-2-ecommerce-product-page/js/main.js
+          cp task-2-ecommerce-product-page/assets/images/m75-hero.svg _site/task-2-ecommerce-product-page/assets/images/m75-hero.svg
+          cp task-2-ecommerce-product-page/assets/images/m75-top.svg _site/task-2-ecommerce-product-page/assets/images/m75-top.svg
+          cp task-2-ecommerce-product-page/assets/images/m75-detail.svg _site/task-2-ecommerce-product-page/assets/images/m75-detail.svg
           touch _site/.nojekyll
 
       - name: Verify artifact contents
@@ -54,6 +66,16 @@ jobs:
           test -f _site/assets/icons/favicon.svg
           test -f _site/assets/images/social-preview.jpg
           test ! -d _site/docs
+          test -f _site/task-2-ecommerce-product-page/index.html
+          test -f _site/task-2-ecommerce-product-page/css/style.css
+          test -f _site/task-2-ecommerce-product-page/js/main.js
+          test -f _site/task-2-ecommerce-product-page/assets/images/m75-hero.svg
+          test -f _site/task-2-ecommerce-product-page/assets/images/m75-top.svg
+          test -f _site/task-2-ecommerce-product-page/assets/images/m75-detail.svg
+          test ! -d _site/task-2-ecommerce-product-page/docs
+          test ! -f _site/README.md
+          test ! -f _site/task-2-ecommerce-product-page/README.md
+          test -f _site/.nojekyll
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v5

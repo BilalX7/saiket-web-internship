@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Explore the fictional MONOFORM M75 mechanical keyboard, choose demonstration options, and try an accessible cart interface. No purchases are processed."
+    >
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js" defer></script>
+    <title>M75 Mechanical Keyboard — MONOFORM Demo Storefront</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to product details</a>
+
+    <header id="top" class="site-header">
+      <div
+        class="site-header__identity"
+        role="group"
+        aria-label="MONOFORM demonstration storefront identity"
+      >
+        <span class="site-header__wordmark">MONOFORM</span>
+        <span class="site-header__context">Product study</span>
+      </div>
+
+      <button
+        class="cart-summary-button"
+        type="button"
+        hidden
+        data-cart-open
+        aria-label="Open cart, 0 items"
+        aria-controls="cart-dialog"
+      >
+        Cart (<span data-cart-count>0</span>)
+      </button>
+    </header>
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol class="breadcrumb__list">
+        <li class="breadcrumb__item"><span>Home</span></li>
+        <li class="breadcrumb__item"><span>Keyboards</span></li>
+        <li class="breadcrumb__item" aria-current="page">
+          M75 Mechanical Keyboard
+        </li>
+      </ol>
+    </nav>
+
+    <main id="main-content" tabindex="-1">
+      <article class="product" aria-labelledby="product-title">
+        <div class="product__hero">
+          <header class="product__overview">
+            <p class="product__eyebrow">A compact desk instrument</p>
+            <p class="product__category">Desk accessories / Keyboards</p>
+            <h1 id="product-title">M75 Mechanical Keyboard</h1>
+            <p class="product__description">
+              A focused 75% mechanical keyboard concept with a clean profile, a
+              wired USB-C connection, and hot-swappable switches. Choose a finish
+              and switch feel to explore the cart experience.
+            </p>
+            <p class="product__supporting-copy">
+              Designed as a fictional interface study: compact in footprint,
+              deliberate in detail, and straightforward to configure.
+            </p>
+            <p class="product__price">
+              <span class="product__price-value">$149.00</span>
+              <span class="product__currency">US dollars</span>
+            </p>
+            <p class="demo-notice">
+              Demonstration storefront — no purchases or payments are processed.
+            </p>
+          </header>
+
+          <section
+            class="product-gallery"
+            aria-labelledby="gallery-title"
+            data-gallery
+          >
+            <h2 id="gallery-title">Product views</h2>
+
+            <div class="product-gallery__figures" data-gallery-figures>
+              <figure
+                id="gallery-figure-hero"
+                class="product-gallery__figure"
+                data-gallery-figure
+                data-image-id="hero"
+              >
+                <img
+                  src="./assets/images/m75-hero.svg"
+                  width="1200"
+                  height="800"
+                  alt="Three-quarter illustration of the MONOFORM M75 mechanical keyboard in Graphite."
+                >
+                <figcaption>
+                  <span class="product-gallery__view-name">Three-quarter view</span>
+                  <span>M75 in Graphite, shown from a three-quarter angle.</span>
+                </figcaption>
+              </figure>
+
+              <figure
+                id="gallery-figure-top"
+                class="product-gallery__figure"
+                data-gallery-figure
+                data-image-id="top"
+              >
+                <img
+                  src="./assets/images/m75-top.svg"
+                  width="1200"
+                  height="800"
+                  alt="Top-down illustration showing the compact key layout of the MONOFORM M75."
+                >
+                <figcaption>
+                  <span class="product-gallery__view-name">Top-down view</span>
+                  <span>Top view of the compact 75% key layout.</span>
+                </figcaption>
+              </figure>
+
+              <figure
+                id="gallery-figure-detail"
+                class="product-gallery__figure"
+                data-gallery-figure
+                data-image-id="detail"
+              >
+                <img
+                  src="./assets/images/m75-detail.svg"
+                  width="1200"
+                  height="800"
+                  alt="Close-up illustration of an M75 keycap and removable mechanical switch."
+                >
+                <figcaption>
+                  <span class="product-gallery__view-name">Switch detail</span>
+                  <span>Exploded detail of a keycap and removable switch.</span>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div
+              class="product-gallery__controls"
+              hidden
+              role="group"
+              data-gallery-controls
+              aria-label="Choose a product view"
+            >
+              <button
+                type="button"
+                data-gallery-select="hero"
+                aria-controls="gallery-figure-hero"
+                aria-pressed="true"
+              >
+                <img
+                  class="product-gallery__thumbnail"
+                  src="./assets/images/m75-hero.svg"
+                  width="1200"
+                  height="800"
+                  alt=""
+                >
+                <span>Show three-quarter view</span>
+              </button>
+              <button
+                type="button"
+                data-gallery-select="top"
+                aria-controls="gallery-figure-top"
+                aria-pressed="false"
+              >
+                <img
+                  class="product-gallery__thumbnail"
+                  src="./assets/images/m75-top.svg"
+                  width="1200"
+                  height="800"
+                  alt=""
+                >
+                <span>Show top-down view</span>
+              </button>
+              <button
+                type="button"
+                data-gallery-select="detail"
+                aria-controls="gallery-figure-detail"
+                aria-pressed="false"
+              >
+                <img
+                  class="product-gallery__thumbnail"
+                  src="./assets/images/m75-detail.svg"
+                  width="1200"
+                  height="800"
+                  alt=""
+                >
+                <span>Show switch detail</span>
+              </button>
+            </div>
+          </section>
+
+          <section class="product-options" aria-labelledby="options-title">
+            <h2 id="options-title">Configure the demonstration product</h2>
+
+            <div class="product-options__static" data-static-options>
+              <h3>Available demonstration options</h3>
+              <p>Colors: Graphite and Sand. Switch types: Linear and Tactile.</p>
+            </div>
+
+            <noscript>
+              <p>
+                Cart features require JavaScript. Product information and images
+                remain available below.
+              </p>
+            </noscript>
+
+            <form class="product-configurator" hidden data-product-configurator>
+              <fieldset class="product-configurator__group">
+                <legend>Color</legend>
+                <p id="color-help">Choose the case and keycap finish.</p>
+
+                <label class="product-option">
+                  <input
+                    type="radio"
+                    name="product-color"
+                    value="graphite"
+                    checked
+                    data-option-color
+                    aria-describedby="color-help"
+                  >
+                  <span
+                    class="product-option__swatch product-option__swatch--graphite"
+                    aria-hidden="true"
+                  ></span>
+                  <span>Graphite</span>
+                </label>
+
+                <label class="product-option">
+                  <input
+                    type="radio"
+                    name="product-color"
+                    value="sand"
+                    data-option-color
+                    aria-describedby="color-help"
+                  >
+                  <span
+                    class="product-option__swatch product-option__swatch--sand"
+                    aria-hidden="true"
+                  ></span>
+                  <span>Sand</span>
+                </label>
+              </fieldset>
+
+              <fieldset class="product-configurator__group">
+                <legend>Switch type</legend>
+                <p id="switch-help">
+                  Choose the demonstration key feel. Price is unchanged.
+                </p>
+
+                <label class="product-option">
+                  <input
+                    type="radio"
+                    name="product-switch"
+                    value="linear"
+                    checked
+                    data-option-switch
+                    aria-describedby="switch-help switch-linear-description"
+                  >
+                  <span>Linear</span>
+                  <span id="switch-linear-description">
+                    Smooth travel without a tactile bump.
+                  </span>
+                </label>
+
+                <label class="product-option">
+                  <input
+                    type="radio"
+                    name="product-switch"
+                    value="tactile"
+                    data-option-switch
+                    aria-describedby="switch-help switch-tactile-description"
+                  >
+                  <span>Tactile</span>
+                  <span id="switch-tactile-description">
+                    A noticeable bump during each press.
+                  </span>
+                </label>
+              </fieldset>
+
+              <div class="product-configurator__summary">
+                <h3>Your configuration</h3>
+                <p data-configuration-summary>Graphite · Linear</p>
+                <p>Every configuration is $149.00.</p>
+              </div>
+
+              <div class="product-configurator__quantity">
+                <label for="product-quantity">Quantity</label>
+                <select
+                  id="product-quantity"
+                  name="quantity"
+                  data-product-quantity
+                  aria-describedby="quantity-help quantity-limit"
+                >
+                  <option value="1" selected>1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <p id="quantity-help">Choose 1–10 for this configuration.</p>
+                <p id="quantity-limit">
+                  Each color and switch combination is limited to 10 items in
+                  this demo cart.
+                </p>
+              </div>
+
+              <button type="submit" data-add-to-cart>Add to cart</button>
+
+              <p
+                class="product-configurator__status"
+                role="status"
+                aria-live="polite"
+                aria-atomic="true"
+                data-cart-status
+              ></p>
+              <p
+                class="product-configurator__error"
+                role="alert"
+                aria-live="assertive"
+                aria-atomic="true"
+                data-cart-error
+              ></p>
+            </form>
+          </section>
+        </div>
+
+        <section class="product-specifications" aria-labelledby="specifications-title">
+          <h2 id="specifications-title">Specifications</h2>
+          <p>A concise fictional feature set for this interface demonstration.</p>
+
+          <dl class="product-specifications__list">
+            <dt>Layout</dt>
+            <dd>Compact 75% layout</dd>
+
+            <dt>Connection</dt>
+            <dd>Wired USB-C</dd>
+
+            <dt>Switch support</dt>
+            <dd>Hot-swappable mechanical switches</dd>
+
+            <dt>Case concept</dt>
+            <dd>Aluminum-style case</dd>
+
+            <dt>Demonstration colors</dt>
+            <dd>Graphite or Sand</dd>
+
+            <dt>Demonstration switch choices</dt>
+            <dd>Linear or Tactile</dd>
+
+            <dt>Included commerce capability</dt>
+            <dd>Variant-aware demonstration cart</dd>
+          </dl>
+
+          <p class="product-specifications__note">
+            These specifications are fictional design content. They are not
+            manufacturing, certification, compatibility, or performance claims.
+          </p>
+        </section>
+
+        <section class="product-faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">Questions, answered plainly</h2>
+
+          <details>
+            <summary>Is the M75 a real product?</summary>
+            <p>
+              No. MONOFORM and the M75 are fictional demonstration content
+              created for this internship project. The page showcases
+              product-page design and accessible cart behavior.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can I buy it here?</summary>
+            <p>
+              No. The cart is an interface demonstration only. It does not place
+              orders, collect personal details, or take payments.
+            </p>
+          </details>
+
+          <details>
+            <summary>Do the options change the price?</summary>
+            <p>
+              No. Every demonstration color and switch combination uses the same
+              fictional price of $149.00.
+            </p>
+          </details>
+
+          <details>
+            <summary>Will the demo remember my cart?</summary>
+            <p>
+              With JavaScript enabled, the demo can remember cart contents on
+              this device when browser storage is available. If storage is
+              unavailable, the cart lasts only while the page remains open. No
+              personal information is stored.
+            </p>
+          </details>
+        </section>
+      </article>
+    </main>
+
+    <dialog id="cart-dialog" class="cart-dialog" aria-labelledby="cart-title" data-cart-dialog>
+      <div class="cart-dialog__header">
+        <h2 id="cart-title">Your demo cart</h2>
+        <button type="button" data-cart-close>Close cart</button>
+      </div>
+
+      <p>
+        This cart is for demonstration only. It cannot place orders or take
+        payments.
+      </p>
+      <p
+        class="cart-dialog__status"
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+        data-dialog-status
+      ></p>
+
+      <div class="cart-dialog__empty" data-cart-empty>
+        <h3>Your cart is empty</h3>
+        <p>
+          Choose a color, switch type, and quantity, then add the M75 to see the
+          cart in action.
+        </p>
+      </div>
+
+      <ul class="cart-dialog__items" aria-label="Cart items" data-cart-items></ul>
+
+      <p class="cart-dialog__subtotal">
+        Subtotal: <span data-cart-subtotal>$0.00</span>
+      </p>
+      <p>Checkout is not available in this demo.</p>
+    </dialog>
+
+    <footer class="site-footer">
+      <p class="site-footer__wordmark">MONOFORM</p>
+      <p>
+        A fictional product-page study for the SaiKet Systems Web Development
+        Internship.
+      </p>
+      <p>
+        Demonstration storefront — no products are sold, and no purchases or
+        payments are processed.
+      </p>
+      <p>No personal information is collected.</p>
+      <a href="#top">Back to top</a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <filter id="top-shadow" x="-10%" y="-20%" width="120%" height="150%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <g id="top-key">
+      <rect x="0" y="3" width="50" height="46" rx="7" fill="#272421"/>
+      <rect width="50" height="44" rx="7" fill="#4a4541" stroke="#645d57" stroke-width="2"/>
+      <circle cx="25" cy="22" r="3" fill="#7d746d" opacity=".62"/>
+    </g>
+    <g id="top-key-dark">
+      <rect x="0" y="3" width="50" height="46" rx="7" fill="#1f1d1b"/>
+      <rect width="50" height="44" rx="7" fill="#36322f" stroke="#57514c" stroke-width="2"/>
+      <circle cx="25" cy="22" r="3" fill="#6b635d" opacity=".58"/>
+    </g>
+    <g id="top-key-accent">
+      <rect x="0" y="3" width="50" height="46" rx="7" fill="#762416"/>
+      <rect width="50" height="44" rx="7" fill="#b83a24" stroke="#d66b57" stroke-width="2"/>
+      <path d="M18 22h14M25 15v14" stroke="#fffdf8" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <rect width="1200" height="800" fill="#f7f2ea"/>
+  <path d="M75 170v-56h78M1047 114h78v56M75 630v56h78M1047 686h78v-56" fill="none" stroke="#b9afa4" stroke-width="2"/>
+  <path d="M92 142h48M1060 142h48M92 658h48M1060 658h48" stroke="#b83a24" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="600" cy="104" r="5" fill="#b83a24"/>
+  <path d="M600 111v28" stroke="#d8cfc4" stroke-width="2"/>
+
+  <rect x="88" y="135" width="1024" height="560" rx="44" fill="#393431" opacity=".16" filter="url(#top-shadow)"/>
+  <rect x="88" y="120" width="1024" height="560" rx="44" fill="#2b2826" stroke="#1f1c1b" stroke-width="4"/>
+  <rect x="112" y="144" width="976" height="512" rx="30" fill="#3d3834" stroke="#655e58" stroke-width="2"/>
+  <rect x="137" y="172" width="926" height="455" rx="20" fill="#2e2a28"/>
+
+  <g>
+    <use href="#top-key-accent" x="157" y="190"/>
+    <use href="#top-key" x="217" y="190"/>
+    <use href="#top-key" x="277" y="190"/>
+    <use href="#top-key" x="337" y="190"/>
+    <use href="#top-key" x="397" y="190"/>
+    <use href="#top-key" x="457" y="190"/>
+    <use href="#top-key" x="517" y="190"/>
+    <use href="#top-key" x="577" y="190"/>
+    <use href="#top-key" x="637" y="190"/>
+    <use href="#top-key" x="697" y="190"/>
+    <use href="#top-key" x="757" y="190"/>
+    <use href="#top-key" x="817" y="190"/>
+    <use href="#top-key-dark" x="877" y="190"/>
+    <use href="#top-key-dark" x="947" y="190"/>
+    <use href="#top-key-dark" x="1007" y="190"/>
+  </g>
+
+  <g>
+    <rect x="157" y="250" width="72" height="47" rx="7" fill="#403b38" stroke="#655e58" stroke-width="2"/>
+    <use href="#top-key" x="239" y="250"/>
+    <use href="#top-key" x="299" y="250"/>
+    <use href="#top-key" x="359" y="250"/>
+    <use href="#top-key" x="419" y="250"/>
+    <use href="#top-key" x="479" y="250"/>
+    <use href="#top-key" x="539" y="250"/>
+    <use href="#top-key" x="599" y="250"/>
+    <use href="#top-key" x="659" y="250"/>
+    <use href="#top-key" x="719" y="250"/>
+    <use href="#top-key" x="779" y="250"/>
+    <use href="#top-key" x="839" y="250"/>
+    <rect x="899" y="250" width="98" height="47" rx="7" fill="#403b38" stroke="#655e58" stroke-width="2"/>
+    <use href="#top-key-dark" x="1007" y="250"/>
+  </g>
+
+  <g>
+    <rect x="157" y="310" width="86" height="47" rx="7" fill="#3a3532" stroke="#5d5650" stroke-width="2"/>
+    <use href="#top-key" x="253" y="310"/>
+    <use href="#top-key" x="313" y="310"/>
+    <use href="#top-key" x="373" y="310"/>
+    <use href="#top-key" x="433" y="310"/>
+    <use href="#top-key" x="493" y="310"/>
+    <use href="#top-key" x="553" y="310"/>
+    <use href="#top-key" x="613" y="310"/>
+    <use href="#top-key" x="673" y="310"/>
+    <use href="#top-key" x="733" y="310"/>
+    <use href="#top-key" x="793" y="310"/>
+    <rect x="853" y="310" width="96" height="47" rx="7" fill="#3a3532" stroke="#5d5650" stroke-width="2"/>
+    <use href="#top-key-dark" x="959" y="310"/>
+    <use href="#top-key-dark" x="1019" y="310"/>
+  </g>
+
+  <g>
+    <rect x="157" y="370" width="104" height="47" rx="7" fill="#36322f" stroke="#57514c" stroke-width="2"/>
+    <use href="#top-key" x="271" y="370"/>
+    <use href="#top-key" x="331" y="370"/>
+    <use href="#top-key" x="391" y="370"/>
+    <use href="#top-key" x="451" y="370"/>
+    <use href="#top-key" x="511" y="370"/>
+    <use href="#top-key" x="571" y="370"/>
+    <use href="#top-key" x="631" y="370"/>
+    <use href="#top-key" x="691" y="370"/>
+    <use href="#top-key" x="751" y="370"/>
+    <use href="#top-key" x="811" y="370"/>
+    <rect x="871" y="370" width="78" height="47" rx="7" fill="#36322f" stroke="#57514c" stroke-width="2"/>
+    <use href="#top-key-dark" x="959" y="370"/>
+    <use href="#top-key-dark" x="1019" y="370"/>
+  </g>
+
+  <g>
+    <rect x="157" y="430" width="126" height="47" rx="7" fill="#36322f" stroke="#57514c" stroke-width="2"/>
+    <use href="#top-key" x="293" y="430"/>
+    <use href="#top-key" x="353" y="430"/>
+    <use href="#top-key" x="413" y="430"/>
+    <use href="#top-key" x="473" y="430"/>
+    <use href="#top-key" x="533" y="430"/>
+    <use href="#top-key" x="593" y="430"/>
+    <use href="#top-key" x="653" y="430"/>
+    <use href="#top-key" x="713" y="430"/>
+    <use href="#top-key" x="773" y="430"/>
+    <rect x="833" y="430" width="116" height="47" rx="7" fill="#36322f" stroke="#57514c" stroke-width="2"/>
+    <use href="#top-key-dark" x="959" y="430"/>
+    <use href="#top-key-dark" x="1019" y="430"/>
+  </g>
+
+  <g>
+    <rect x="157" y="490" width="68" height="47" rx="7" fill="#36322f" stroke="#57514c" stroke-width="2"/>
+    <rect x="235" y="490" width="68" height="47" rx="7" fill="#403b38" stroke="#655e58" stroke-width="2"/>
+    <rect x="313" y="490" width="300" height="47" rx="8" fill="#48423e" stroke="#6a625b" stroke-width="2"/>
+    <rect x="623" y="490" width="68" height="47" rx="7" fill="#403b38" stroke="#655e58" stroke-width="2"/>
+    <rect x="701" y="490" width="68" height="47" rx="7" fill="#403b38" stroke="#655e58" stroke-width="2"/>
+    <rect x="779" y="490" width="68" height="47" rx="7" fill="#403b38" stroke="#655e58" stroke-width="2"/>
+    <use href="#top-key-dark" x="899" y="490"/>
+    <use href="#top-key-dark" x="959" y="490"/>
+    <use href="#top-key-dark" x="1019" y="490"/>
+    <path d="M916 513h16M976 513h16M1036 513h16" stroke="#81776f" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <rect x="157" y="562" width="890" height="24" rx="12" fill="#23201e"/>
+  <path d="M172 574h240M788 574h244" stroke="#6c645e" stroke-width="3" stroke-linecap="round" opacity=".72"/>
+  <circle cx="600" cy="646" r="5" fill="#b83a24"/>
+</svg>
