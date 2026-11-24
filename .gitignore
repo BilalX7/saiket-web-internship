@@ -1,0 +1,12 @@
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
+
+# Generated GitHub Pages artifact
+_site/
+
+# Superseded, unused portrait
+task-1-portfolio/assets/images/bilal-headshot-old.webp
