@@ -5,7 +5,10 @@ on:
     branches:
       - main
     paths:
-      - "task-1-portfolio/**"
+      - "task-1-portfolio/index.html"
+      - "task-1-portfolio/css/**"
+      - "task-1-portfolio/js/**"
+      - "task-1-portfolio/assets/**"
       - ".github/workflows/deploy-portfolio.yml"
   workflow_dispatch:
 
