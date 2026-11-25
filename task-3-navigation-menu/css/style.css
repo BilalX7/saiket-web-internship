@@ -1,0 +1,397 @@
+/* Palette and shared layout */
+:root {
+  color-scheme: light;
+  --canvas: #f5f1e8;
+  --surface: #fffcf5;
+  --ink: #17212b;
+  --muted: #53606b;
+  --link: #075f68;
+  --accent: #087e8b;
+  --tint: #e2efeb;
+  --pressed: #d0e4df;
+  --focus: #ffb000;
+  --line: #c9c2b5;
+  --content-width: 70rem;
+  --gutter: clamp(1rem, 4vw, 3rem);
+  --section-space: clamp(2.25rem, 6vw, 5rem);
+  --sticky-clearance: 0rem;
+  scroll-padding-block-start: var(--sticky-clearance);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font: 1rem/1.6 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  overflow-wrap: anywhere;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(2.75rem, 1.6rem + 5.2vw, 6rem);
+}
+
+h2 {
+  font-size: clamp(1.875rem, 1.4rem + 2vw, 3.5rem);
+}
+
+h3 {
+  font-size: 1.1875rem;
+  line-height: 1.3;
+}
+
+p {
+  max-inline-size: 65ch;
+  color: var(--muted);
+}
+
+/* Links and keyboard access */
+a {
+  color: var(--link);
+  font-weight: 650;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.23em;
+}
+
+a:hover {
+  text-decoration-thickness: 0.16em;
+}
+
+a:active {
+  color: var(--ink);
+  background: var(--pressed);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+body > a[href="#main-content"] {
+  position: fixed;
+  z-index: 2;
+  inset-block-start: 0.75rem;
+  inset-inline-start: var(--gutter);
+  max-inline-size: calc(100% - 2 * var(--gutter));
+  padding: 0.625rem 0.875rem;
+  border-radius: 0.25rem;
+  background: var(--focus);
+  color: var(--ink);
+}
+
+body > a[href="#main-content"]:not(:focus) {
+  inline-size: 1px;
+  block-size: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+/* Keep the entire menu visible as it reflows. */
+body > header {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+  padding-block: 0.75rem;
+  padding-inline: max(var(--gutter), calc((100% - var(--content-width)) / 2));
+  border-block-end: 1px solid var(--line);
+  background: var(--surface);
+}
+
+header > a,
+nav a,
+#home > a,
+footer > a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 2.75rem;
+  border-radius: 0.25rem;
+}
+
+header > a {
+  gap: 0.625rem;
+  color: var(--ink);
+  font-size: 0.9375rem;
+  font-weight: 750;
+  letter-spacing: 0.035em;
+}
+
+header > a::before {
+  content: "";
+  flex: 0 0 0.7rem;
+  block-size: 0.7rem;
+  border: 2px solid var(--link);
+  transform: rotate(45deg);
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  justify-content: center;
+  min-inline-size: 2.75rem;
+  padding-inline: 0.75rem;
+  font-size: 0.9375rem;
+}
+
+nav a:hover {
+  background: var(--tint);
+}
+
+nav a:active {
+  background: var(--pressed);
+}
+
+/* Main content and fragment targets */
+main,
+footer {
+  inline-size: min(var(--content-width), calc(100% - 2 * var(--gutter)));
+  margin-inline: auto;
+}
+
+main,
+section[id] {
+  scroll-margin-block-start: 1rem;
+}
+
+main > section {
+  padding-block: var(--section-space);
+}
+
+section + section {
+  border-block-start: 1px solid var(--line);
+}
+
+section > h2 + p {
+  margin-block-start: 1rem;
+}
+
+section:target > :is(h1, h2) {
+  text-decoration: underline var(--link) 0.07em;
+  text-underline-offset: 0.16em;
+}
+
+#home {
+  position: relative;
+  margin-block-start: clamp(1rem, 3vw, 2.5rem);
+  padding: clamp(1.375rem, 5vw, 4.5rem);
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: var(--surface);
+}
+
+#home > p:first-child {
+  margin-block-end: 0.875rem;
+  color: var(--link);
+  font-size: 0.8125rem;
+  font-weight: 750;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+#home h1 {
+  max-inline-size: 12ch;
+}
+
+#home > h1 + p {
+  max-inline-size: 44ch;
+  margin-block-start: 1.25rem;
+  font-size: clamp(1.0625rem, 1rem + 0.4vw, 1.25rem);
+}
+
+#home > a {
+  margin-block-start: 1.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--link);
+  background: var(--link);
+  color: var(--surface);
+}
+
+#home > a:hover {
+  border-color: var(--ink);
+  background: var(--ink);
+}
+
+#home > a:active {
+  background: var(--pressed);
+  color: var(--ink);
+}
+
+#about {
+  border-block-start: 0;
+}
+
+#services,
+#work {
+  display: grid;
+  gap: 0.875rem;
+}
+
+:is(#services, #work) > :is(h2, p) {
+  grid-column: 1 / -1;
+  margin-block-start: 0;
+}
+
+:is(#services, #work) > div {
+  min-inline-size: 0;
+  padding: clamp(1.125rem, 3vw, 1.75rem);
+  border: 1px solid var(--line);
+  border-block-start: 2px solid var(--accent);
+  border-radius: 0.375rem;
+  background: var(--surface);
+}
+
+:is(#services, #work) > p {
+  margin-block-end: 0.5rem;
+}
+
+:is(#services, #work) h3 + p,
+#work p + p {
+  margin-block-start: 0.625rem;
+}
+
+#work h3 + p {
+  color: var(--link);
+  font-size: 0.875rem;
+  font-weight: 650;
+}
+
+#contact {
+  padding: clamp(1.375rem, 5vw, 3.5rem);
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: var(--tint);
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.375rem 1.5rem;
+  padding-block: 1.5rem;
+  font-size: 0.875rem;
+}
+
+@media (min-width: 40rem) {
+  #services,
+  #work {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 58rem) {
+  #home {
+    padding-inline-end: 34%;
+  }
+
+  /* Empty pseudo-elements draw a waypoint without adding accessible text. */
+  #home::before,
+  #home::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+  }
+
+  #home::before {
+    inset-block-start: 50%;
+    inset-inline-end: 8%;
+    inline-size: 21%;
+    aspect-ratio: 1;
+    border: 1px solid var(--accent);
+    border-radius: 50%;
+    background: var(--tint);
+    transform: translateY(-50%);
+  }
+
+  #home::after {
+    inset-block-start: 50%;
+    inset-inline-end: 12.5%;
+    inline-size: 12%;
+    aspect-ratio: 1;
+    border: 1px solid var(--link);
+    background: radial-gradient(circle, var(--link) 0 5%, transparent 6%);
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  #services {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Only the wide, single-row header sticks. Short windows retain document flow. */
+@media (min-width: 58rem) and (min-height: 32rem) {
+  :root {
+    --sticky-clearance: 5rem;
+  }
+
+  body > header {
+    position: sticky;
+    inset-block-start: 0;
+  }
+
+  nav ul {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (width < 58rem) {
+  body > header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  header > a {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 32rem) {
+  nav ul {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  nav li {
+    grid-column: span 2;
+  }
+
+  nav li:nth-child(n + 4) {
+    grid-column: span 3;
+  }
+
+  nav a {
+    display: flex;
+    min-inline-size: 0;
+    padding-inline: 0.25rem;
+    background: var(--canvas);
+  }
+}

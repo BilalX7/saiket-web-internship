@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WAYMARK Studio | Simple Section Navigation</title>
+    <meta
+      name="description"
+      content="Explore a fictional creative studio concept through a clear, accessible HTML and CSS section navigation demo."
+    >
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <a href="#main-content">Skip to main content</a>
+
+    <header>
+      <a href="#home">WAYMARK Studio</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <section id="home" aria-labelledby="home-heading">
+        <p>WAYMARK Studio</p>
+        <h1 id="home-heading">Make the path clear.</h1>
+        <p>
+          We shape focused identities and digital experiences that help good ideas
+          become easier to find, understand, and remember.
+        </p>
+        <a href="#services">Explore services</a>
+      </section>
+
+      <section id="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">Designed around direction</h2>
+        <p>
+          WAYMARK is a fictional creative-studio concept built around a simple
+          belief: design should give people a clear sense of where they are and
+          where to go next. Its approach pairs purposeful language with calm
+          visual systems, removing noise before adding decoration. For this
+          portfolio exercise, the studio provides a compact setting for exploring
+          hierarchy, rhythm, and accessible section navigation without suggesting
+          real clients, awards, or commercial results.
+        </p>
+      </section>
+
+      <section id="services" aria-labelledby="services-heading">
+        <h2 id="services-heading">Focused ways of working</h2>
+        <p>
+          Three complementary disciplines show how a small set of clear choices
+          can create a consistent route from idea to experience.
+        </p>
+        <div>
+          <h3>Identity</h3>
+          <p>
+            Naming direction, visual principles, and practical brand building
+            blocks designed to make an idea recognizable and coherent.
+          </p>
+        </div>
+        <div>
+          <h3>Web</h3>
+          <p>
+            Clear page structures and responsive interface concepts that guide
+            visitors toward useful content without unnecessary friction.
+          </p>
+        </div>
+        <div>
+          <h3>Editorial</h3>
+          <p>
+            Thoughtful hierarchy, pacing, and language systems that turn complex
+            material into readable, engaging stories.
+          </p>
+        </div>
+      </section>
+
+      <section id="work" aria-labelledby="work-heading">
+        <h2 id="work-heading">Concept explorations</h2>
+        <p>
+          These self-initiated studies are fictional design prompts, not paid
+          client projects or evidence of completed commercial work.
+        </p>
+        <div>
+          <h3>Common Ground</h3>
+          <p>Community identity study</p>
+          <p>
+            A visual-language exploration for an imagined neighborhood program,
+            using shared shapes and direct wording to make local activities feel
+            welcoming and easy to navigate.
+          </p>
+        </div>
+        <div>
+          <h3>Open Form</h3>
+          <p>Digital editorial study</p>
+          <p>
+            A flexible reading concept for an imagined independent journal,
+            balancing strong typographic landmarks with quiet space so each story
+            has a clear beginning and pace.
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">A demonstration, not a studio inquiry</h2>
+        <p>
+          This is a fictional concept page created to demonstrate accessible HTML
+          and CSS navigation. No inquiries are processed here, and no email
+          address, form, phone number, social account, or business service is
+          offered. Use the menu to revisit any section and observe how each link
+          leads to a clear destination.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        WAYMARK Studio — a fictional navigation exercise for SaiKet Systems Web
+        Development Internship Task 3.
+      </p>
+      <a href="#home">Back to top</a>
+    </footer>
+  </body>
+</html>

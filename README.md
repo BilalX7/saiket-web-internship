@@ -10,11 +10,13 @@ own sibling directory so its source, assets, and review history remain easy to i
 - [`task-2-ecommerce-product-page/`](./task-2-ecommerce-product-page/) — a responsive product-page
   and accessible demonstration cart for the fictional MONOFORM M75, built with the same dependency-free
   technology stack. It is not a real storefront.
+- [`task-3-navigation-menu/`](./task-3-navigation-menu/) — WAYMARK Studio, a fictional studio page
+  demonstrating native section navigation with HTML and CSS only.
 
-Task 1 is published through GitHub Pages at
-[https://bilalx7.github.io/saiket-web-internship/](https://bilalx7.github.io/saiket-web-internship/).
+The GitHub Pages workflow is configured to deploy all three tasks in one artifact:
 
-The GitHub Pages workflow publishes both tasks in one artifact: Task 1 remains at the root, while
-Task 2 is served from
-[https://bilalx7.github.io/saiket-web-internship/task-2-ecommerce-product-page/](https://bilalx7.github.io/saiket-web-internship/task-2-ecommerce-product-page/).
+- Task 1 remains at the [Pages root](https://bilalx7.github.io/saiket-web-internship/).
+- Task 2 remains at its [product page URL](https://bilalx7.github.io/saiket-web-internship/task-2-ecommerce-product-page/).
+- Task 3's planned URL is [the navigation menu subpath](https://bilalx7.github.io/saiket-web-internship/task-3-navigation-menu/).
+
 Task 2 is a fictional product and cart demonstration, not a real storefront.

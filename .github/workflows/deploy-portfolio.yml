@@ -13,6 +13,8 @@ on:
       - "task-2-ecommerce-product-page/css/**"
       - "task-2-ecommerce-product-page/js/**"
       - "task-2-ecommerce-product-page/assets/**"
+      - "task-3-navigation-menu/index.html"
+      - "task-3-navigation-menu/css/style.css"
       - ".github/workflows/deploy-portfolio.yml"
   workflow_dispatch:
 
@@ -41,6 +43,7 @@ jobs:
           mkdir -p _site/task-2-ecommerce-product-page/css
           mkdir -p _site/task-2-ecommerce-product-page/js
           mkdir -p _site/task-2-ecommerce-product-page/assets/images
+          mkdir -p _site/task-3-navigation-menu/css
           cp task-1-portfolio/index.html _site/index.html
           cp -R task-1-portfolio/css _site/css
           cp -R task-1-portfolio/js _site/js
@@ -51,6 +54,8 @@ jobs:
           cp task-2-ecommerce-product-page/assets/images/m75-hero.svg _site/task-2-ecommerce-product-page/assets/images/m75-hero.svg
           cp task-2-ecommerce-product-page/assets/images/m75-top.svg _site/task-2-ecommerce-product-page/assets/images/m75-top.svg
           cp task-2-ecommerce-product-page/assets/images/m75-detail.svg _site/task-2-ecommerce-product-page/assets/images/m75-detail.svg
+          cp task-3-navigation-menu/index.html _site/task-3-navigation-menu/index.html
+          cp task-3-navigation-menu/css/style.css _site/task-3-navigation-menu/css/style.css
           touch _site/.nojekyll
 
       - name: Verify artifact contents
@@ -71,6 +76,10 @@ jobs:
           test ! -d _site/task-2-ecommerce-product-page/docs
           test ! -f _site/README.md
           test ! -f _site/task-2-ecommerce-product-page/README.md
+          test -f _site/task-3-navigation-menu/index.html
+          test -f _site/task-3-navigation-menu/css/style.css
+          test ! -d _site/task-3-navigation-menu/docs
+          test ! -f _site/task-3-navigation-menu/README.md
           test -f _site/.nojekyll
 
       - name: Upload GitHub Pages artifact
