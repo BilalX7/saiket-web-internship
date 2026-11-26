@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FORM &amp; FIELD | Creative Workshop Interest Form Demo</title>
+  <meta name="description" content="Try an accessible fictional workshop interest form that validates sample details without sending or saving responses.">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#workshop-form">Skip to form</a>
+
+  <header class="site-header">
+    <p class="site-identity">FORM &amp; FIELD</p>
+    <p>Practice form</p>
+  </header>
+
+  <main>
+    <div class="page-intro">
+      <p class="eyebrow">FIELD NOTE 04</p>
+      <h1>Shape a workshop around your curiosity.</h1>
+      <p>Choose a creative direction, share what you would like to explore, and see how a clear form guides each decision. This is a fictional interface exercise—not an event listing or registration.</p>
+      <p>Use sample information rather than real personal details. Your entries stay on this page and are not transmitted or stored by FORM &amp; FIELD. Your browser may still offer to autofill or remember values independently.</p>
+    </div>
+
+    <section id="workshop-form" class="form-card" tabindex="-1"
+      aria-labelledby="workshop-form-heading" aria-describedby="practice-disclaimer">
+      <h2 id="workshop-form-heading">Creative Workshop Interest Form</h2>
+      <p id="practice-disclaimer">Practice form only. Use invented details. Nothing you enter is sent or saved.</p>
+      <p>Complete the fields below to test labels, grouped choices, and validation. No workshop place will be requested or reserved.</p>
+      <p>Labels identify every field as required or optional.</p>
+
+      <form id="interest-form" aria-labelledby="workshop-form-heading">
+        <div class="form-field">
+          <label for="full-name">Full name (required)</label>
+          <p id="full-name-hint" class="field-hint">Use an invented name with 2–80 characters. Punctuation, spaces, and letters from any language are welcome.</p>
+          <input type="text" id="full-name" name="fullName" autocomplete="name"
+            required minlength="2" maxlength="80" placeholder="Example: Rowan Lee"
+            aria-describedby="full-name-hint">
+          <p id="full-name-error" class="field-error" hidden></p>
+        </div>
+
+        <div class="form-field">
+          <label for="email-address">Email address (required)</label>
+          <p id="email-address-hint" class="field-hint">Use a sample address, such as name@example.com. It will not be sent or saved by this page.</p>
+          <input type="email" id="email-address" name="email" autocomplete="email"
+            inputmode="email" required maxlength="254" placeholder="name@example.com"
+            aria-describedby="email-address-hint">
+          <p id="email-address-error" class="field-error" hidden></p>
+        </div>
+
+        <div class="form-field">
+          <label for="workshop-topic">Workshop topic (required)</label>
+          <p id="workshop-topic-hint" class="field-hint">Choose the fictional topic that interests you most. This does not reserve a place.</p>
+          <select id="workshop-topic" name="workshopTopic" required aria-describedby="workshop-topic-hint">
+            <option value="" selected disabled>Choose a topic</option>
+            <option value="visual-identity">Visual Identity</option>
+            <option value="interface-design">Interface Design</option>
+            <option value="editorial-layout">Editorial Layout</option>
+          </select>
+          <p id="workshop-topic-error" class="field-error" hidden></p>
+        </div>
+
+        <fieldset id="preferred-format-group" class="form-group" aria-describedby="preferred-format-hint">
+          <legend>Preferred format (required)</legend>
+          <p id="preferred-format-hint" class="field-hint">Choose one fictional preference. It is not a booking or schedule request.</p>
+          <div class="form-choice">
+            <input type="radio" id="format-online" name="preferredFormat" value="online" required>
+            <label for="format-online">Online</label>
+          </div>
+          <div class="form-choice">
+            <input type="radio" id="format-in-person" name="preferredFormat" value="in-person" required>
+            <label for="format-in-person">In person</label>
+          </div>
+          <div class="form-choice">
+            <input type="radio" id="format-either" name="preferredFormat" value="either" required>
+            <label for="format-either">Either works</label>
+          </div>
+          <p id="preferred-format-error" class="field-error" hidden></p>
+        </fieldset>
+
+        <fieldset id="areas-of-interest-group" class="form-group" aria-describedby="areas-of-interest-hint">
+          <legend>Areas of interest (optional)</legend>
+          <p id="areas-of-interest-hint" class="field-hint">Select any that appeal to you, or leave all three unchecked.</p>
+          <div class="form-choice">
+            <input type="checkbox" id="interest-typography" name="areasOfInterest" value="typography">
+            <label for="interest-typography">Typography</label>
+          </div>
+          <div class="form-choice">
+            <input type="checkbox" id="interest-color-systems" name="areasOfInterest" value="color-systems">
+            <label for="interest-color-systems">Color systems</label>
+          </div>
+          <div class="form-choice">
+            <input type="checkbox" id="interest-accessible-interfaces" name="areasOfInterest" value="accessible-interfaces">
+            <label for="interest-accessible-interfaces">Accessible interfaces</label>
+          </div>
+        </fieldset>
+
+        <div class="form-field">
+          <label for="exploration-notes">What would you like to explore? (optional)</label>
+          <p id="exploration-notes-hint" class="field-hint">Keep it to 300 characters or fewer, and do not include real personal or confidential details.</p>
+          <textarea id="exploration-notes" name="explorationNotes" rows="5" maxlength="300"
+            placeholder="For example, a skill, question, or design challenge."
+            aria-describedby="exploration-notes-hint"></textarea>
+          <p id="exploration-notes-error" class="field-error" hidden></p>
+        </div>
+
+        <div class="form-field">
+          <div class="form-choice">
+            <input type="checkbox" id="demo-acknowledgement" name="demoAcknowledgement"
+              value="understood" required aria-describedby="demo-acknowledgement-hint">
+            <label for="demo-acknowledgement">I understand that this practice form does not send or save my responses. (required)</label>
+          </div>
+          <p id="demo-acknowledgement-hint" class="field-hint">Checking this box confirms only that you understand the demonstration; it does not register you for anything.</p>
+          <p id="demo-acknowledgement-error" class="field-error" hidden></p>
+        </div>
+
+        <div class="form-actions">
+          <p id="form-status" role="status" aria-atomic="true"></p>
+          <button type="submit" id="complete-demo" disabled>Complete demo</button>
+          <noscript>
+            <p>This demo needs JavaScript to check the form safely. You can still review and edit every field, but the Complete demo button will remain unavailable and nothing will be submitted.</p>
+          </noscript>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>FORM &amp; FIELD — a fictional HTML forms exercise for SaiKet Systems Web Development Internship Task 4. No responses are collected.</p>
+  </footer>
+</body>
+</html>
